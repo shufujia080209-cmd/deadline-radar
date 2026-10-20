@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deadline Radar</title>
+    <script type="module" crossorigin src="/deadline-radar/assets/index-8aYNNVlM.js"></script>
+    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-CRpv0yDt.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Deadline Radar</h1>
+        <p class="subtitle">Everything due, soonest first.</p>
+        <p id="storage-warning" class="storage-warning" role="alert" hidden></p>
+      </header>
+
+      <form id="add-form" novalidate>
+        <h2 id="form-heading">Add an assignment</h2>
+        <div class="fields">
+          <label>
+            Course
+            <input id="course" name="course" placeholder="CS 124" autocomplete="off" list="course-options" />
+            <datalist id="course-options"></datalist>
+          </label>
+          <label>
+            Title
+            <input id="title" name="title" placeholder="MP1" autocomplete="off" />
+          </label>
+          <label>
+            Due date
+            <input id="due-date" name="due-date" type="date" />
+          </label>
+          <label>
+            Due time
+            <input id="due-time" name="due-time" type="time" value="23:59" />
+          </label>
+        </div>
+        <div class="extra-fields">
+          <label class="checkbox-label">
+            <input id="high-priority" name="high-priority" type="checkbox" />
+            High priority
+          </label>
+          <label>
+            Notes (optional)
+            <textarea id="notes" name="notes" rows="2" maxlength="500" placeholder="Read chapter 5 first"></textarea>
+          </label>
+        </div>
+        <ul id="form-errors" class="errors" role="alert"></ul>
+        <div class="form-actions">
+          <button id="submit-button" type="submit">Add assignment</button>
+          <button id="cancel-edit" type="button" class="secondary" hidden>Cancel</button>
+        </div>
+        <p id="form-status" class="status" role="status"></p>
+      </form>
+
+      <div id="course-filter" class="course-filter" role="group" aria-label="Show assignments for" hidden></div>
+
+      <section>
+        <h2>Upcoming</h2>
+        <p id="urgency-summary" class="urgency-summary" hidden></p>
+        <p id="upcoming-empty" class="empty">Nothing due. Add an assignment above to get started.</p>
+        <ul id="upcoming-list" class="assignment-list"></ul>
+      </section>
+
+      <section>
+        <h2>Completed</h2>
+        <p id="completed-empty" class="empty">Nothing completed yet. Check off an assignment when you finish it.</p>
+        <ul id="completed-list" class="assignment-list"></ul>
+      </section>
+
+      <details class="backup">
+        <summary>Backup &amp; restore</summary>
+        <p class="empty">
+          Your list is saved only in this browser. Export a backup file to keep a copy, or import one to bring your list
+          back or move it to another browser.
+        </p>
+        <div class="form-actions">
+          <button id="export-backup" type="button" class="secondary">Export backup</button>
+          <button id="import-backup" type="button" class="secondary">Import backup</button>
+          <input id="import-file" type="file" accept=".json,application/json" hidden />
+        </div>
+        <p id="backup-status" class="status" role="status"></p>
+      </details>
+    </main>
+    <div id="undo-bar" class="undo-bar" role="status" hidden>
+      <span id="undo-message"></span>
+      <button id="undo-button" type="button">Undo</button>
+    </div>
+  </body>
+</html>
