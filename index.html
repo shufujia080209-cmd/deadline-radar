@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deadline Radar</title>
-    <script type="module" crossorigin src="/deadline-radar/assets/index-BiMgO_gL.js"></script>
-    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-x_4fWEIb.css">
+    <script type="module" crossorigin src="/deadline-radar/assets/index-CwrFPQQ-.js"></script>
+    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-DR5dabUk.css">
   </head>
   <body>
     <main>
@@ -14,6 +14,21 @@
         <p class="subtitle">Everything due, soonest first.</p>
         <p id="storage-warning" class="storage-warning" role="alert" hidden></p>
       </header>
+
+      <section id="today-card" class="today-card" hidden>
+        <h2 id="today-heading">Today</h2>
+        <ul id="today-list" class="today-list"></ul>
+        <p id="today-empty" class="empty" hidden>Nothing due today and nothing overdue.</p>
+        <div class="reminders">
+          <button id="reminders-button" type="button" class="secondary">Turn on reminders</button>
+          <p id="reminders-status" class="status" role="status"></p>
+          <p class="reminders-privacy">
+            Reminders are notifications from your own browser, about an hour before something is due, and only while
+            this page is open. Nothing is sent to a server, and your assignments never leave this device. Your browser
+            asks for permission first; you can turn reminders off here or in your browser's site settings.
+          </p>
+        </div>
+      </section>
 
       <form id="add-form" novalidate>
         <h2 id="form-heading">Add an assignment</h2>
