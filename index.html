@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deadline Radar</title>
-    <script type="module" crossorigin src="/deadline-radar/assets/index-DdJ_yHb3.js"></script>
-    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-C_yve0iu.css">
+    <script type="module" crossorigin src="/deadline-radar/assets/index-CMLbZQiG.js"></script>
+    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-CYBnt0ds.css">
   </head>
   <body>
     <main>
@@ -78,6 +78,19 @@
 
       <div id="course-filter" class="course-filter" role="group" aria-label="Show assignments for" hidden></div>
       <div id="status-filter" class="course-filter" role="group" aria-label="Show assignments that are" hidden></div>
+      <div id="view-choice" class="course-filter" role="group" aria-label="View as" hidden></div>
+
+      <section id="calendar-section" hidden>
+        <div class="calendar-header">
+          <h2 id="calendar-heading">This week</h2>
+          <div class="calendar-nav">
+            <button id="previous-week" type="button" class="item-button" aria-label="Previous week">‹ Previous</button>
+            <button id="this-week" type="button" class="item-button">This week</button>
+            <button id="next-week" type="button" class="item-button" aria-label="Next week">Next ›</button>
+          </div>
+        </div>
+        <ol id="week-grid" class="week-grid"></ol>
+      </section>
 
       <section id="upcoming-section">
         <h2>Upcoming</h2>
