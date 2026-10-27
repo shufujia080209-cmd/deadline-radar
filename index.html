@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deadline Radar</title>
-    <script type="module" crossorigin src="/deadline-radar/assets/index-CMLbZQiG.js"></script>
-    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-CYBnt0ds.css">
+    <script type="module" crossorigin src="/deadline-radar/assets/index-D87P-fig.js"></script>
+    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-x_4fWEIb.css">
   </head>
   <body>
     <main>
@@ -79,6 +79,17 @@
       <div id="course-filter" class="course-filter" role="group" aria-label="Show assignments for" hidden></div>
       <div id="status-filter" class="course-filter" role="group" aria-label="Show assignments that are" hidden></div>
       <div id="view-choice" class="course-filter" role="group" aria-label="View as" hidden></div>
+
+      <section id="workload-section" hidden>
+        <h2>Workload</h2>
+        <p class="empty">Everything due in each week, finished or not. Lighter bars are finished work.</p>
+        <h3 class="chart-heading">Next 4 weeks</h3>
+        <ul id="weekly-workload" class="bar-chart"></ul>
+        <p id="overdue-earlier" class="overdue-earlier" hidden></p>
+        <h3 class="chart-heading">By course, next 4 weeks</h3>
+        <ul id="course-workload" class="bar-chart"></ul>
+        <p id="course-workload-empty" class="empty" hidden>Nothing due in the next 4 weeks.</p>
+      </section>
 
       <section id="calendar-section" hidden>
         <div class="calendar-header">
