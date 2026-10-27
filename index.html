@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deadline Radar</title>
-    <script type="module" crossorigin src="/deadline-radar/assets/index-8aYNNVlM.js"></script>
-    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-CRpv0yDt.css">
+    <script type="module" crossorigin src="/deadline-radar/assets/index-f_EPEufq.js"></script>
+    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-1aidPR8l.css">
   </head>
   <body>
     <main>
@@ -53,6 +53,14 @@
         </div>
         <p id="form-status" class="status" role="status"></p>
       </form>
+
+      <div id="search-bar" class="search-bar" hidden>
+        <label for="search">Search</label>
+        <div class="search-row">
+          <input id="search" type="search" placeholder="Title or notes" autocomplete="off" />
+          <button id="clear-search" type="button" class="secondary" hidden>Clear</button>
+        </div>
+      </div>
 
       <div id="course-filter" class="course-filter" role="group" aria-label="Show assignments for" hidden></div>
 
