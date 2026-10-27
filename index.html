@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deadline Radar</title>
-    <script type="module" crossorigin src="/deadline-radar/assets/index-f_EPEufq.js"></script>
-    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-1aidPR8l.css">
+    <script type="module" crossorigin src="/deadline-radar/assets/index-BtYiZc4S.js"></script>
+    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-BAVU3PKh.css">
   </head>
   <body>
     <main>
@@ -63,15 +63,16 @@
       </div>
 
       <div id="course-filter" class="course-filter" role="group" aria-label="Show assignments for" hidden></div>
+      <div id="status-filter" class="course-filter" role="group" aria-label="Show assignments that are" hidden></div>
 
-      <section>
+      <section id="upcoming-section">
         <h2>Upcoming</h2>
         <p id="urgency-summary" class="urgency-summary" hidden></p>
         <p id="upcoming-empty" class="empty">Nothing due. Add an assignment above to get started.</p>
         <ul id="upcoming-list" class="assignment-list"></ul>
       </section>
 
-      <section>
+      <section id="completed-section">
         <h2>Completed</h2>
         <p id="completed-empty" class="empty">Nothing completed yet. Check off an assignment when you finish it.</p>
         <ul id="completed-list" class="assignment-list"></ul>
