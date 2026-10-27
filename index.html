@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deadline Radar</title>
-    <script type="module" crossorigin src="/deadline-radar/assets/index-Bxyd5q8I.js"></script>
-    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-DR5dabUk.css">
+    <script type="module" crossorigin src="/deadline-radar/assets/index-rQi29lUr.js"></script>
+    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-_qtUKjkY.css">
   </head>
   <body>
     <main>
@@ -35,12 +35,19 @@
         <div class="fields">
           <label>
             Course
-            <input id="course" name="course" placeholder="CS 124" autocomplete="off" list="course-options" />
+            <input
+              id="course"
+              name="course"
+              placeholder="CS 124"
+              autocomplete="off"
+              list="course-options"
+              maxlength="60"
+            />
             <datalist id="course-options"></datalist>
           </label>
           <label>
             Title
-            <input id="title" name="title" placeholder="MP1" autocomplete="off" />
+            <input id="title" name="title" placeholder="MP1" autocomplete="off" maxlength="120" />
           </label>
           <label>
             Due date
