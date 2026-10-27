@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deadline Radar</title>
-    <script type="module" crossorigin src="/deadline-radar/assets/index-D87P-fig.js"></script>
+    <script type="module" crossorigin src="/deadline-radar/assets/index-BiMgO_gL.js"></script>
     <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-x_4fWEIb.css">
   </head>
   <body>
@@ -117,7 +117,7 @@
       </section>
 
       <details class="backup">
-        <summary>Backup &amp; restore</summary>
+        <summary>Import &amp; backup</summary>
         <p class="empty">
           Your list is saved only in this browser. Export a backup file to keep a copy, or import one to bring your list
           back or move it to another browser.
@@ -126,6 +126,14 @@
           <button id="export-backup" type="button" class="secondary">Export backup</button>
           <button id="import-backup" type="button" class="secondary">Import backup</button>
           <input id="import-file" type="file" accept=".json,application/json" hidden />
+        </div>
+        <p class="empty">
+          You can also import a calendar (.ics) file exported from a calendar app. The file is read only in this browser
+          and is never uploaded. Importing the same calendar again updates it without making duplicates.
+        </p>
+        <div class="form-actions">
+          <button id="import-calendar" type="button" class="secondary">Import calendar (.ics)</button>
+          <input id="calendar-file" type="file" accept=".ics,text/calendar" hidden />
         </div>
         <p id="backup-status" class="status" role="status"></p>
       </details>
