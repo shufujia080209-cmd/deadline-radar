@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deadline Radar</title>
-    <script type="module" crossorigin src="/deadline-radar/assets/index-BtYiZc4S.js"></script>
-    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-BAVU3PKh.css">
+    <script type="module" crossorigin src="/deadline-radar/assets/index-DdJ_yHb3.js"></script>
+    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-C_yve0iu.css">
   </head>
   <body>
     <main>
@@ -45,6 +45,20 @@
             Notes (optional)
             <textarea id="notes" name="notes" rows="2" maxlength="500" placeholder="Read chapter 5 first"></textarea>
           </label>
+          <div id="repeat-fields" class="fields">
+            <label>
+              Repeats
+              <select id="repeats" name="repeats">
+                <option value="none">Does not repeat</option>
+                <option value="weekly">Weekly</option>
+                <option value="biweekly">Every 2 weeks</option>
+              </select>
+            </label>
+            <label id="repeat-end-label" hidden>
+              Ends on (optional)
+              <input id="repeat-end" name="repeat-end" type="date" />
+            </label>
+          </div>
         </div>
         <ul id="form-errors" class="errors" role="alert"></ul>
         <div class="form-actions">
