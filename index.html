@@ -10,8 +10,8 @@
     <link rel="icon" type="image/png" href="/deadline-radar/favicon.png" />
     <link rel="apple-touch-icon" href="/deadline-radar/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Deadline Radar" />
-    <script type="module" crossorigin src="/deadline-radar/assets/index-CrCyiFHu.js"></script>
-    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-DKJSs-h6.css">
+    <script type="module" crossorigin src="/deadline-radar/assets/index-BdAvnmtd.js"></script>
+    <link rel="stylesheet" crossorigin href="/deadline-radar/assets/index-C11ahx0a.css">
   </head>
   <body>
     <main>
@@ -21,8 +21,10 @@
         <p id="storage-warning" class="storage-warning" role="alert" hidden></p>
       </header>
 
+      <div id="view-choice" class="course-filter view-tabs" role="group" aria-label="View as" hidden></div>
+
       <section id="today-card" class="today-card" hidden>
-        <h2 id="today-heading">Today</h2>
+        <h2 id="today-heading" tabindex="-1">Today</h2>
         <ul id="today-list" class="today-list"></ul>
         <p id="today-empty" class="empty" hidden>Nothing due today and nothing overdue.</p>
         <div class="reminders">
@@ -99,14 +101,13 @@
       <div id="search-bar" class="search-bar" hidden>
         <label for="search">Search</label>
         <div class="search-row">
-          <input id="search" type="search" placeholder="Title or notes" autocomplete="off" />
-          <button id="clear-search" type="button" class="secondary" hidden>Clear</button>
+          <input id="search" type="search" placeholder="Course, title, or notes" autocomplete="off" />
+          <button id="clear-search" type="button" class="secondary" hidden>Clear search</button>
         </div>
       </div>
 
       <div id="course-filter" class="course-filter" role="group" aria-label="Show assignments for" hidden></div>
       <div id="status-filter" class="course-filter" role="group" aria-label="Show assignments that are" hidden></div>
-      <div id="view-choice" class="course-filter" role="group" aria-label="View as" hidden></div>
 
       <section id="workload-section" hidden>
         <h2>Workload</h2>
@@ -132,7 +133,7 @@
       </section>
 
       <section id="upcoming-section">
-        <h2>Upcoming</h2>
+        <h2 id="upcoming-heading" tabindex="-1">Upcoming</h2>
         <p id="urgency-summary" class="urgency-summary" hidden></p>
         <p id="upcoming-empty" class="empty">Nothing due. Add an assignment above to get started.</p>
         <ul id="upcoming-list" class="assignment-list"></ul>
@@ -166,6 +167,7 @@
         <p id="backup-status" class="status" role="status"></p>
       </details>
     </main>
+    <p id="results-announcer" class="visually-hidden" role="status"></p>
     <div id="undo-bar" class="undo-bar" role="status" hidden>
       <span id="undo-message"></span>
       <button id="undo-button" type="button">Undo</button>
